@@ -1,0 +1,75 @@
+CREATION OF TABLE 
+
+
+
+create table deptinfo(name varchar(20),id int,loc varchar(20));
+insert into deptinfo (name,id,loc) values("marketing",100,"CHennai");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("marketing",200,"Hyderabad");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("software",300,"Hyderabad");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("Quality",400,"Hyderabad");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("Development",500,"Hyderabad");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("Deployment",600,"Mumbai");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("Deployment",700,"Mumbai");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into deptinfo (name,id,loc) values("Testing",800,"Hyderabad");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from deptinfo;
++-------------+------+-----------+
+| name        | id   | loc       |
++-------------+------+-----------+
+| marketing   |  100 | CHennai   |
+| marketing   |  200 | Hyderabad |
+| software    |  300 | Hyderabad |
+| Quality     |  400 | Hyderabad |
+| Development |  500 | Hyderabad |
+| Deployment  |  600 | Mumbai    |
+| Deployment  |  700 | Mumbai    |
+| Testing     |  800 | Hyderabad |
++-------------+------+-----------+
+8 rows in set (0.00 sec)
+
+
+mysql> select id from deptinfo;
++------+
+| id   |
++------+
+|  100 |
+|  200 |
+|  300 |
+|  400 |
+|  500 |
+|  600 |
+|  700 |
+|  800 |
++------+
+8 rows in set (0.00 sec)
+
+
+mysql> select count(name) from deptinfo;
++-------------+
+| count(name) |
++-------------+
+|           8 |
++-------------+
+1 row in set (0.00 sec)
+
+
+mysql> update deptinfo set name="debugging" where id=100;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
